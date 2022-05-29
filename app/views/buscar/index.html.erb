@@ -1,0 +1,28 @@
+<%= form_with url: buscar_index_path, method: :get do |form| %>
+    <%= form.label :Usuario_id, style: "display: block" %>
+    <%= form.select :Usuario_id, options_for_select(Usuario.all.map{|s|[s.nombres + ' ' + s.apellidos, s.id]}) %>
+    <%= form.submit %>
+<% end %>
+
+
+
+    <table>
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Fecha</td>
+                    <td>Estado</td>
+                </tr>
+        </thead>
+        <tbody>
+            <% if @post != nil %>
+            <tr>
+            <% @post.each do |buscar| %>
+                <td>%= buscar.id %</td>
+                <td><%= buscar.fecha %></td>
+                <td><%= buscar.estado %></td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+<% end %>

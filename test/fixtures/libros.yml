@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo: MyString
+  autor: MyString
+  anyo: 2022-05-29 16:01:43
+  migration: MyString
+  or: MyString
+
+two:
+  titulo: MyString
+  autor: MyString
+  anyo: 2022-05-29 16:01:43
+  migration: MyString
+  or: MyString
